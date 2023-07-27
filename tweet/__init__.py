@@ -1,13 +1,12 @@
 from .untweet import deleteTweets, findTweet
 from .unretweet import deleteRetweets
-from timeline import toTimeline
+from timeline import toTimeline, home, replies, likes
 
 def hasTweet():
     return len(findTweet())
 
-
-def deleteAll():
-    toTimeline()
+def delTweets():
+    toTimeline(home)
     has_tweet = hasTweet()
     while has_tweet:
         rc = deleteTweets()
@@ -17,3 +16,9 @@ def deleteAll():
             print("Recovering from Error!")
             toTimeline()
         has_tweet = hasTweet()
+
+def delReplies():
+    toTimeline(replies)
+
+def delLikes():
+    toTimeline(likes)

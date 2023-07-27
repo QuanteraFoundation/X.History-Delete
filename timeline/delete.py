@@ -1,5 +1,6 @@
-from tweet import deleteAll
-
+from tweet import delTweets, delReplies, delLikes
 
 def deleteEntireTimeline():
-    deleteAll()
+    # delTweets()
+    delReplies()
+    # delLikes()

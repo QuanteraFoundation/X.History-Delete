@@ -8,4 +8,5 @@ def scrollDown():
     '''https://www.programcreek.com/python/example/114687/selenium.webdriver.common.keys.Keys.PAGE_DOWN'''
     element = driver.find_element(By.TAG_NAME, "body")
     element.send_keys(Keys.PAGE_DOWN)
+    time.sleep(1)
 
